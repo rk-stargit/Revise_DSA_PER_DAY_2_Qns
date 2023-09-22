@@ -58,7 +58,7 @@ Constraints:
 Solution
 
 
-
+//1st
 
 int removeElement(vector<int>& nums, int val) {
         int k=0;
@@ -70,3 +70,32 @@ int removeElement(vector<int>& nums, int val) {
         }
         return k;
  }
+
+
+
+
+
+//2nd
+
+
+
+ int removeElement(vector<int>& nums, int val) {
+        vector<int> :: iterator it;
+        it=nums.begin();
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==val){
+                nums.erase(it);
+                it--;
+                i--;
+            }
+            it++;
+        }
+        return nums.size() ;
+    }
+
+
+
+
+
+
+
